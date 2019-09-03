@@ -19,8 +19,10 @@ int triangle(float a, float b, float c)
         return 1;
     }
 
-    // iso (also needs inequality)
-    if (a == b || b == c || c == a)
+    // iso
+    if ((a == b || b == c || c == a)
+        && triangle_inequality(a,b,c)
+    )
     {
         return 2;
     }
